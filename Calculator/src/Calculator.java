@@ -18,7 +18,7 @@ public class Calculator extends Frame{
  Panel panel3=null;
  TextField txt;
  Button[] button=new Button[22];
- String[] string={"1","2","3","4","+","5","6","7","8","-","9","0",".","=","*","/","sqrt","x^2","x^y","radom","清空","关闭"};
+ String[] string={"1","2","3","4","+","5","6","7","8","-","9","0",".","=","*","/","sqrt","x^2","x^y","log","清空","关闭"};
  static double a;
  static String s,str;//定义变量，创建对象
  
