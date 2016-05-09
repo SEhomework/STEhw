@@ -17,8 +17,8 @@ public class Calculator extends Frame{
  Panel panel2=null;
  Panel panel3=null;
  TextField txt;
- Button[] button=new Button[18];
- String[] string={"1","2","3","+","4","5","6","-","7","8","9","*","0",".","=","/","清空","关闭"};
+ Button[] button=new Button[22];
+ String[] string={"1","2","3","4","+","5","6","7","8","-","9","0",".","=","*","/","sqrt","x^2","x^y","radom","清空","关闭"};
  static double a;
  static String s,str;//定义变量，创建对象
  
@@ -59,8 +59,8 @@ public class Calculator extends Frame{
  public Panel getPanel2(){
   if(panel2==null){
    panel2=new Panel();
-   panel2.setLayout(new GridLayout(4,4,10,10));
-   for(int i=0;i<=15;i++){//添加按钮到panel2中
+   panel2.setLayout(new GridLayout(4,5,10,10));
+   for(int i=0;i<=19;i++){//添加按钮到panel2中
     panel2.add(button[i]=new Button(string[i]));
     button[i].addActionListener(new buttonListener());
    }  
@@ -73,13 +73,13 @@ public class Calculator extends Frame{
    panel3=new Panel();
    panel3.setBackground(Color.gray);
    panel3.setLayout(new FlowLayout());
-   for(int i=16;i<=17;i++){
+   for(int i=20;i<=21;i++){
     button[i]=new Button(string[i]);
    }
-   for(int i=16;i<=17;i++)
+   for(int i=20;i<=21;i++)
     panel3.add(button[i]);
-   button[16].addActionListener(new buttonListener());//为"清空"按钮添加监听器
-   button[17].addActionListener(new ActionListener(){
+   button[20].addActionListener(new buttonListener());//为"清空"按钮添加监听器
+   button[21].addActionListener(new ActionListener(){
     public void actionPerformed(ActionEvent e){
      System.exit(0); 
     } 
@@ -127,7 +127,7 @@ public class Calculator extends Frame{
  
  public void calculate(){//编写具体计算方法
   if(s=="+")
-   a*=Double.parseDouble(txt.getText());
+   a+=Double.parseDouble(txt.getText());
   else if(s=="-")
    a-=Double.parseDouble(txt.getText()); 
   else if(s=="*")
