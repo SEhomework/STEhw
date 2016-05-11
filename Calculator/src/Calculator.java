@@ -42,7 +42,7 @@ public class Calculator extends Frame{
  }
  
  public static void main(String[] args){
-  Calculator calculator=new Calculator("¼ÆËãÆ÷");
+  Calculator calculator=new Calculator("¼ÆÆ÷");
   calculator.addWindowListener(new Close());
   calculator.setVisible(true);
  }
